@@ -4,6 +4,7 @@ local vets = require('app.vets')
 local owners = require('app.owners')
 local pets = require('app.pets')
 local visits = require('app.visits')
+local users = require('app.users')
 
 -- function to get cluster schema
 local function get_schema()
@@ -23,6 +24,7 @@ local function init(opts) -- luacheck: no unused args
     rawset(_G, 'find_pet_by_id', pets.find_pet_by_id)
     rawset(_G, 'find_visits_by_pet_id', visits.find_visits_by_pet_id)
     rawset(_G, 'save_pet', pets.save_pet)
+    rawset(_G, 'find_user_by_login', users.find_user_by_login)
 
     return true
 end

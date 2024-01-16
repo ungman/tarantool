@@ -14,6 +14,7 @@ files["app/roles/api_router.lua"] = {
         "save_owner",
         "save_visit",
         "find_visits_by_pet_id",
+        "find_user_by_login"
     },
 }
 files["app/roles/api_storage.lua"] = {

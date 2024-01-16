@@ -16,12 +16,13 @@ import org.springframework.data.tarantool.repository.config.EnableTarantoolRepos
 import org.springframework.samples.petclinic.owner.OwnerRepository;
 import org.springframework.samples.petclinic.owner.PetRepository;
 import org.springframework.samples.petclinic.owner.PetTypeRepository;
+import org.springframework.samples.petclinic.permission.UserRepository;
 import org.springframework.samples.petclinic.vet.VetRepository;
 import org.springframework.samples.petclinic.visit.VisitRepository;
 
 @Configuration
 @EnableTarantoolRepositories(basePackageClasses = {VetRepository.class, OwnerRepository.class, PetRepository.class,
-    PetTypeRepository.class, VisitRepository.class})
+    PetTypeRepository.class, VisitRepository.class, UserRepository.class})
 public class TarantoolConfiguration extends AbstractTarantoolDataConfiguration {
 
     @Value("${tarantool.host}")
