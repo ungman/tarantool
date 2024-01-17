@@ -4,7 +4,7 @@ import org.springframework.data.tarantool.core.mapping.Field;
 import org.springframework.data.tarantool.core.mapping.Tuple;
 import org.springframework.samples.petclinic.model.BaseEntity;
 
-@Tuple("users")
+@Tuple("users_table")
 public class User extends BaseEntity {
 
 	@Field(name = "login")

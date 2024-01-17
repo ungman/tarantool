@@ -52,6 +52,6 @@ INSERT INTO visits VALUES (2, 8, '2013-01-02', 'rabies shot');
 INSERT INTO visits VALUES (3, 8, '2013-01-03', 'neutered');
 INSERT INTO visits VALUES (4, 7, '2013-01-04', 'spayed');
 
-INSERT INTO users VALUES (1, 'Ivanov I.', 'rxIvanov', 'admin');
-INSERT INTO users VALUES (2, 'Petrov V.', 'rxPetrov', 'user');
-INSERT INTO users VALUES (3, 'Demidov K.', 'rxDemidov', 'superuser');
+INSERT INTO users_table VALUES (1, 'Ivanov I.', 'rxIvanov', 'admin');
+INSERT INTO users_table VALUES (2, 'Petrov V.', 'rxPetrov', 'user');
+INSERT INTO users_table VALUES (3, 'Demidov K.', 'rxDemidov', 'superuser');
