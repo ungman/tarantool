@@ -176,3 +176,10 @@ crud.insert(
 crud.insert(
     "types", { gen_simple_uuid('6'), 'hamster' }
 )
+crud.insert(
+    "users", { gen_simple_uuid('6'), 'ivanov', 'ivanov', 'dir' }
+)
+crud.insert(
+    "users", { gen_simple_uuid('6'), 'users', 'petrov', 'employee' }
+)
+
