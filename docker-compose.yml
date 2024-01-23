@@ -1,12 +1,20 @@
-mysql:
-  image: mysql:5.7
-  ports:
-    - "3306:3306"
-  environment:
-    - MYSQL_ROOT_PASSWORD=
-    - MYSQL_ALLOW_EMPTY_PASSWORD=true
-    - MYSQL_USER=petclinic
-    - MYSQL_PASSWORD=petclinic
-    - MYSQL_DATABASE=petclinic
-  volumes:
-    - "./conf.d:/etc/mysql/conf.d:ro"
+services:
+  tarantool-cluster:
+    container_name: cluster_cartridge
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+
+    volumes:
+      - ./cluster:/app
+      - ./entrypoint:/entrypoint
+    command: sh -c "chmod +x /entrypoint/entrypoint.sh && sh /entrypoint/entrypoint.sh"
+    ports:
+      - '3301:3301'
+      - '8081:8081'
+    networks:
+      - cluster_cartridge
+
+networks:
+  cluster_cartridge:
+    driver: bridge
